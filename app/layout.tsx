@@ -33,7 +33,7 @@ export default function RootLayout({
     <meta property="twitter:url" content="https://metatags.io/"/>
     <meta property="twitter:title" content="Twitch Clone"/>
     <meta property="twitter:description" content="Twitch clone made with Next.js 13 and Tailwind"/>
-    <meta property="twitter:image" content="https://i.postimg.cc/wvwTRYgD/twitch-clone-preview.png"/>
+    <meta property="twitter:image" content="https://i.postimg.cc/8zHq9FLm/preview-twitter.png"/>
     </head>
       <body className={`${inter.className} mt-14`}>
        <SidebarProvider>
