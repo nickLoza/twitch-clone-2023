@@ -1,6 +1,8 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-
+import Navbar from './components/navbar'
+import Sidebar from './components/sidebar'
+import { SidebarProvider } from './context/SidebarContext'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -15,7 +17,30 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <head>
+    <title>Twitch Clone</title>
+    <meta name="title" content="Twitch Clone"/>
+    <meta name="description" content="Twitch clone made with Next.js 13 and Tailwind"/>
+
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://metatags.io/"/>
+    <meta property="og:title" content="Twitch Clone"/>
+    <meta property="og:description" content="Twitch clone made with Next.js 13 and Tailwind"/>
+    <meta property="og:image" content="https://i.postimg.cc/wvwTRYgD/twitch-clone-preview.png"/>
+
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:url" content="https://metatags.io/"/>
+    <meta property="twitter:title" content="Twitch Clone"/>
+    <meta property="twitter:description" content="Twitch clone made with Next.js 13 and Tailwind"/>
+    <meta property="twitter:image" content="https://i.postimg.cc/wvwTRYgD/twitch-clone-preview.png"/>
+    </head>
+      <body className={`${inter.className} mt-14`}>
+       <SidebarProvider>
+          <Sidebar/>
+          <Navbar/>
+          {children}
+        </SidebarProvider>
+      </body>
     </html>
   )
 }
