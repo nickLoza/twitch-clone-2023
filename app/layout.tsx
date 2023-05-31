@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import Navbar from './components/navbar'
 import Sidebar from './components/sidebar'
 import { SidebarProvider } from './context/SidebarContext'
+import { AiOutlineGithub } from "react-icons/ai";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -40,6 +41,12 @@ export default function RootLayout({
           <Navbar/>
           {children}
         </SidebarProvider>
+        <a 
+          className="fixed right-[4rem] bottom-[4rem] text-[4rem] transition transition-delay-150 hover:scale-[1.1]"
+          href="https://github.com/nickLoza/twitch-clone-2023" 
+          target="_blank">
+          <AiOutlineGithub/>
+        </a>
       </body>
     </html>
   )

@@ -7,7 +7,7 @@ import { BsSearch } from 'react-icons/bs';
 
 function Navbar() {
 	return (
-		<nav className='fixed top-0 left-0 h-14 w-full flex flex-nowrap items-center p-4 bg-[#0e0e10] mb-[2px]'>
+		<nav className='fixed z-500 top-0 left-0 h-14 w-full flex flex-nowrap items-center p-4 bg-[#0e0e10] mb-[2px]'>
 		{/*left*/}
 			<div className='flex grow items-center justify-start'>
 				<Link href='/'>
